@@ -4,22 +4,34 @@
 *	MNKY Register sidebars
 *	--------------------------------------------------------------------- 
 */
-
-function mnky_sidebars() {
-	register_sidebar( array(
-		'name' => __( 'Blog/Post Sidebar', 'quince' ),
-		'id' => 'blog-sidebar',
-		'description' => __( 'Appears on blog layout and posts', 'quince' ),
+
+
+function mnky_sidebars() {
+
+	register_sidebar( array(
+
+		'name' => __( 'Blog/Post Sidebar', 'quince' ),
+
+		'id' => 'blog-sidebar',
+
+		'description' => __( 'Appears on blog layout and posts', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Page Sidebar', 'quince' ),
-		'id' => 'default-sidebar',
-		'description' => __( 'Appears as default sidebar on pages', 'quince' ),
+	) );
+
+	
+
+	register_sidebar( array(
+
+		'name' => __( 'Page Sidebar', 'quince' ),
+
+		'id' => 'default-sidebar',
+
+		'description' => __( 'Appears as default sidebar on pages', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -48,40 +60,62 @@ function mnky_sidebars() {
 		) );
 	}
 	
-	register_sidebar( array(
-		'name' => __( 'Footer Sidebar 1', 'quince' ),
-		'id' => 'footer-widget-area-1',
-		'description' => __( 'Appears in the footer section', 'quince' ),
+	register_sidebar( array(
+
+		'name' => __( 'Footer Sidebar 1', 'quince' ),
+
+		'id' => 'footer-widget-area-1',
+
+		'description' => __( 'Appears in the footer section', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Footer Sidebar 2', 'quince' ),
-		'id' => 'footer-widget-area-2',
-		'description' => __( 'Appears in the footer section', 'quince' ),
+	) );
+
+	
+
+	register_sidebar( array(
+
+		'name' => __( 'Footer Sidebar 2', 'quince' ),
+
+		'id' => 'footer-widget-area-2',
+
+		'description' => __( 'Appears in the footer section', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Footer Sidebar 3', 'quince' ),
-		'id' => 'footer-widget-area-3',
-		'description' => __( 'Appears in the footer section', 'quince' ),
+	) );
+
+	
+
+	register_sidebar( array(
+
+		'name' => __( 'Footer Sidebar 3', 'quince' ),
+
+		'id' => 'footer-widget-area-3',
+
+		'description' => __( 'Appears in the footer section', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-	
-	register_sidebar( array(
-		'name' => __( 'Footer Sidebar 4', 'quince' ),
-		'id' => 'footer-widget-area-4',
-		'description' => __( 'Appears in the footer section', 'quince' ),
+	) );
+
+	
+
+	register_sidebar( array(
+
+		'name' => __( 'Footer Sidebar 4', 'quince' ),
+
+		'id' => 'footer-widget-area-4',
+
+		'description' => __( 'Appears in the footer section', 'quince' ),
+
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -105,10 +139,29 @@ function mnky_sidebars() {
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
-	) );
-
-}
-
-add_action( 'widgets_init', 'mnky_sidebars' );
-
+	) );
+	
+	/*
+	register_sidebar( array(
+		'name'          => __('header-contact','quince'),
+		'id'            => 'h-contact',
+		'description' => __( 'Product page widget area', 'quince' ),
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+	*/
+
+
+
+
+}
+
+
+
+add_action( 'widgets_init', 'mnky_sidebars' );
+
+
+
 ?>

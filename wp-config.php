@@ -42,19 +42,19 @@
 
 /** The name of the database for WordPress */
 
-define('DB_NAME', 'yommnl_wp8');  //wp-restyle
+define('DB_NAME', 'wp-restyle');  //yommnl_wp8
 
 
 
 /** MySQL database username */
 
-define('DB_USER', 'yommnl_wp8user');       //user
+define('DB_USER', 'user');       //yommnl_wp8user
 
 
 
 /** MySQL database password */
 
-define('DB_PASSWORD', 'Z,#1S4fRwV6ad#aV9t,40(,2'); //11111
+define('DB_PASSWORD', '11111'); //yommnl_wp8user
 
 
 

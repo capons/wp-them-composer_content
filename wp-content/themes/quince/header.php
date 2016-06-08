@@ -66,14 +66,16 @@
 			get_sidebar('top');
 		} ?>
 		<!--start header -->
+
 		<header class="header-m-wrapper">
 			<div class="header-top">
 				<div class="container">
-					<div style="padding: 20px;text-align: center" class="col-xs-6">
-						<img style="margin-top: 7px" src="<?php bloginfo("template_directory");?>/images/logo.350x76.jpg">
+					<div style="padding: 20px;text-align: left" class="col-xs-6">
+						<img style="margin-top: 7px" src="<?php bloginfo("template_directory");?>/images/new-logo.jpg">
 					</div>
 					<div style="padding: 20px" class="col-xs-6">
-						<div style="text-align: center" class="col-lg-12">
+						<div style="text-align: center;float: none;margin: 0 auto" class="col-lg-9">
+
 							<!--
 							<ul class="header-top-menu">
 								<li><a href="#">Team</a></li>
@@ -84,6 +86,7 @@
 							</ul>
 							-->
 							<?php
+							/*
 							wp_nav_menu( array(
 								'menu' => 'h-top-menu',
 								//'depth' => 2,
@@ -92,10 +95,34 @@
 								//Process nav menu using our custom nav walker
 								'walker' => new wp_bootstrap_navwalker()) //libs/wp-bootstrap
 							);
+							*/
 							?>
+							<?php if ( is_active_sidebar( 'home_right_1' ) ) : ?>
+								<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+									<?php dynamic_sidebar( 'home_right_1' ); ?>
+								</div><!-- #primary-sidebar -->
+							<?php endif; ?>
+
+
+
+
+							<div style="text-align: center;padding: 0px" class="col-xs-6">
+								<!--
+								<p style="margin-bottom: 5px;margin-right: 20px;"><span>Email:</span><span> your@email.com</span></p>
+								-->
+								<?php if ( ! dynamic_sidebar('header-cont') ) : ?>
+									<h3 class="widgettitle">Footer Widget Area 4</h3>
+									<p><a href="<?php echo admin_url('widgets.php'); ?>">Assign a widget to this area now.</a></p>
+								<?php endif; // end widget area ?>
+							</div>
+							<div style="text-align: center;padding: 0px" class="col-xs-6">
+								<?php if ( ! dynamic_sidebar('header-cont-email') ) : ?>
+									<p><a href="<?php echo admin_url('widgets.php'); ?>">Assign a widget to this area now.</a></p>
+								<?php endif; // end widget area ?>
+							</div>
 						</div>
 						<div style="text-align: center" class="col-lg-12">
-							<a class="header-top-m-t" style="color:white;font-size: 20px;background-color: #ff5800;border-radius: 5px;padding: 10px 20px;font-family: 'Open Sans';font-weight: 700;display: inline-block" href="#">VRAAG EEN GRATIS PROEFLES AAN</a>
+							<a class="header-top-m-t" style="color:white;font-size: 20px;background-color: rgb(23, 191, 227);border-radius: 5px;padding: 10px 20px;font-family: 'Open Sans';font-weight: 700;display: inline-block" href="#">VRAAG EEN GRATIS PROEFLES AAN</a>
 						</div>
 					</div>
 				</div>
@@ -104,7 +131,7 @@
 				<div class="container">
 					<!-- Brand and toggle get grouped for better mobile display -->
 					<div class="navbar-header">
-						<img class="header-main-menu-l" src="<?php bloginfo("template_directory");?>/images/logo.350x76.jpg">
+						<img class="header-main-menu-l" src="<?php bloginfo("template_directory");?>/images/logo-small.jpg">
 						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
 							<span class="icon-bar"></span>
@@ -140,8 +167,10 @@
 						);
 						?>
 						<!--sum menu display in small screen -->
+						<!--
 						<div class="h-sub-menu">
 							<?php
+						/*
 							wp_nav_menu( array(
 								'menu' => 'h-top-menu',
 								//'depth' => 2,
@@ -150,8 +179,10 @@
 								//Process nav menu using our custom nav walker
 								'walker' => new wp_bootstrap_navwalker()) //libs/wp-bootstrap
 							);
+						*/
 							?>
 							<div>
+							-->
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
 			</nav>

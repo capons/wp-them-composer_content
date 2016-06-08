@@ -91,6 +91,46 @@ function mnky_scripts() {
 	
 }
 
+/* registr side_bar*/
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Home right sidebar',
+		'id'            => 'home_right_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'header-cont', 'quince' ),
+		'id' => 'sidebar-1',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'quince' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<p class="widgettitle">',
+		'after_title'   => '</p>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'header-cont-email', 'quince' ),
+		'id' => 'sidebar-2',
+		'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'quince' ),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '<p class="widgettitle">',
+		'after_title'   => '</p>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
+/* ./registr side_bar*/
+/*registr widget*/
+
+
+/* ./regist widget*/
+
 //includ nav wolker lib
 require_once('libs/wp_bootstrap_navwalker.php');
 
